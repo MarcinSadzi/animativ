@@ -1,0 +1,27 @@
+@use './styles/until/variables' as *;
+
+
+
+
+
+.navigation {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    &__link {
+        text-decoration: none;
+        font-family: 'Sintony', sans-serif;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.022rem;
+        line-height: 1.875rem;
+        color: $fontMainColor;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        &:hover {
+        color: $btnBg;
+        }
+    }
+}
+
+

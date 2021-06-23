@@ -1,0 +1,58 @@
+@use './styles/until/variables' as *;
+@use './styles/until/mixins' as *;
+
+
+    
+ .swiper-slide .text-box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      @include center;
+      .motto {
+        margin-top: 6rem;
+    &__text {
+        font-family: 'Sintony', sans-serif;
+        
+        color: $fontMainColor;
+        
+        h1 {   
+            font-family: 'Sintony', sans-serif;
+            font-size: 3,875rem;   
+            font-weight: 900;
+            margin-bottom: 1rem; 
+          }
+          h2 {
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            font-size: 2,625rem;  
+                   
+          }
+        }
+        &__image {
+            margin-top: 4rem;
+        }
+        &__link {
+            margin-top: 1.1875rem;
+            p {
+            font-family: 'Dosis', sans-serif;
+            font-size: 0.875rem;
+            font-weight: bold;
+            color: $btnBg;
+            }
+        
+            a {
+                text-decoration: none;
+                font-family: 'Dosis', sans-serif;
+                color: $fontMainColor;
+                font-size: 2.25rem;
+                margin-left: -1rem;
+                font-weight: 500;
+                
+            }
+          }
+        }        
+      } 
+
+
+   

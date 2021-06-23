@@ -1,0 +1,93 @@
+@use './styles/until/variables' as *;
+@use './styles/until/mixins' as *;
+
+
+.btn {
+    
+    background-color: $btnBg;
+    border-style: none;
+    border-radius: 4px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.0625rem;
+    font-family: 'Sintony', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: $fontMainColor;
+    letter-spacing: 0.021875rem;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    @include tarnsition-btn;
+    &:hover {
+        @include transform-btn;
+    }
+    &--nav {
+        background-image: url("/ico/icon_plate.png");        
+        background-position: 12% 50%;
+        padding: 3px;
+       
+        &::after {
+            content: "BOOK YOUR TABLE";
+            display: block;
+            border: 1px solid white;
+            border-radius: 4px;
+            padding: 15px 6px 12px 51px;
+            color: $fontMainColor; 
+             
+                     
+        }    
+    }
+    &--sections {
+        @include btn-margin (20px, 28px);
+       
+    }
+    &--footer {
+        @include btn-margin (29px, 36px);
+     }
+    &--appAvilable {
+        white-space: nowrap;
+        background-color: $in-footer;
+        padding-top: 1.875rem;
+        padding-bottom: 14px;
+        padding-left: 70px;
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 18px;
+        background-position: 10% 50%;
+        position: relative;
+        &-app-store {
+            background-image: url('/ico/icon_apple.png');
+            padding-right: 69px;
+            margin-bottom: 0.75rem;
+            &::before {
+               content: "Avilable on the";   
+               @include appBtnHover;        
+              }    
+            }
+        &-google {
+            background-image: url('/ico/icon_Google\ Play.png');
+            padding-right: 52px;
+            &::before {
+                content: "Get it on";   
+                @include appBtnHover;        
+             }   
+         }
+
+      }
+    }
+       
+
+
+   .social-media a div {
+    @include tarnsition-btn;
+    &:hover {
+        @include transform-btn;
+    }
+   }
+
+
+
+  
+
+
+
+   

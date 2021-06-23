@@ -1,0 +1,74 @@
+@use './styles/until/variables' as *;
+@use './styles/until/mixins' as *;
+
+
+.gallery {   
+    font-family: 'Sintony', sans-serif;    
+    background-color: $gallery-bg;
+    padding-top: 6.09375rem; 
+    padding-bottom: 6.25rem;
+    h1 {
+        text-align: center;
+        padding-bottom: 1.65625rem;
+    }
+    .container-fullScreen {       
+        position: relative;    
+        .swiper-container {
+            height: 24.375rem;             
+          }        
+          .swiper-slide {   
+            height:21.25rem;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+    
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            }       
+             .swiper-pagination{                
+                bottom: 0;
+                z-index: 1;               
+              .swiper-pagination-bullet {
+                position: relative;
+                width: 14px;
+                height: 14px;        
+                border: 2px solid #363D43;
+                margin-right: 0%;
+                opacity: 3;
+                background: white;
+                bottom: 0;
+                }            
+                .swiper-pagination-bullet-active {
+                color: #fff;
+                background: white;
+                border-color: $btnBg;                
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: $btnBg;
+                    height: 5px;
+                    width: 5px;
+                    border-radius: 50%;
+                    left: 30%;
+                    top: 30%;       
+               }                            
+             }
+           }        
+        }     
+    }
+
+

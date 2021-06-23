@@ -1,0 +1,172 @@
+@use './styles/until/variables' as *;
+@use './styles/themes/theme' as *; 
+@use './styles/until/mixins' as *;
+
+
+footer {
+    padding-top: 6.31rem;
+    padding-bottom: 4.1875rem;
+    background-color: $footer-main;
+    form {
+        width:100%;
+    }
+    .footer__items {
+        height: 100%;
+        &__title {
+            display: flex;
+        h3{
+        font-family: 'Dosis', sans-serif;
+        font-size: 1.5rem;
+        color: $fontMainColor;
+        font-weight: bold;  
+        }
+         }   
+        &__box {
+          color: $footer-text; 
+          font-family: 'Sintony', sans-serif;    
+          height: 100%;
+          width: 100%;
+          @include flexCol;
+        .navigation {          
+            @include flexCol;            
+                &__link {
+                    color: $footer-text; 
+                    line-height: 1.75rem;
+                    @include flexCol; 
+                    justify-content: space-between;
+                    transition-duration: 0.3s;
+                    transition-timing-function: ease-in-out;
+                    &:hover {
+                    color: $btnBg;
+                    }
+                }
+            }
+        .news-letter {
+                width: 100%;
+                .box-label {
+                    margin-bottom: 1rem;
+                    font-size: 0.87rem;
+                }
+                .input-line {
+                    margin-bottom: 2.31rem;
+                }
+                .social-media {
+                    display: flex;
+                    .circle {
+                        position: relative;
+                        border-radius: 50%;
+                        width: 52px;
+                        height: 52px;
+                        display: flex;
+                        margin-right: 7px; 
+                        background-size: 23px 22px;                                  
+                    }
+                    .circle {
+                        background: $footer-sqer1 url("/ico/question3.png") no-repeat scroll 60% 60%;
+                        
+                        &--1 {
+                            background: $footer-sqer2 url("/ico/question3.png") no-repeat scroll 60% 60%;
+                        }
+                        &--2 {
+                            background: $footer-sqer3 url("/ico/question3.png") no-repeat scroll 60% 60%;
+                        }
+                        
+                    
+                    }
+                
+                }
+
+            }
+        .btn-container{
+                @include flexCol;
+                align-items: flex-start;        
+                }
+            }
+        }
+    .copy-rights {
+        padding-top: 4.9375rem;
+        .line-left, 
+        .line-right {            
+                background: $in-footer;                
+                background-position-y: 25%;
+                height: 2px;            
+        }
+        .copy-rights-text {
+            font-size: 0.8125rem;
+            text-align: center;
+            font-family: 'Sintony', sans-serif;
+            color: $footer-text;
+            strong {
+                color: $fontMainColor;
+            }
+        }
+    }
+    }
+
+
+
+
+    @media screen and (max-width: 991px) {
+        footer {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }       
+        .footer__items .footer__items__box 
+        .navigation {
+            display: none;
+        }
+        .footer__items .footer__items__title,
+        .footer__items .footer__items__box {
+           display: flex;
+           justify-content: center;
+        }
+        .news-letter {
+            @include flexCol;
+            align-items: center;
+            form {
+                @include flexCol;
+                align-items: center;
+           .input-line {
+                @include flexCol;
+                align-items: center;
+           .box-label {
+                margin-top: 1rem; 
+           }
+           .btn--footer {
+               margin-top: 1rem;
+            }
+        }
+       }
+    }
+        .copy-rights-text {
+            width: 100%;
+            align-self: center;
+        }
+    }
+   
+    @media screen and (max-width: 640px) {
+    footer {
+        padding-top: 3.31rem;  
+    }
+    .footer__items:nth-of-type(6) {
+        @include flexCol;
+    }
+    .footer__items .footer__items__box .btn-container {
+       align-self: center;
+    }
+    footer .copy-rights {
+        padding-top: 3rem;
+}
+    }
+
+
+
+
+
+
+
+
+
+
+
+

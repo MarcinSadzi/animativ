@@ -1,0 +1,90 @@
+@use './styles/until/variables' as *;
+@use './styles/until/mixins' as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $fontMainColor;
+    overflow-x:hidden;
+    
+}
+
+.container-xl {
+    width: 1169px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+.container-fullScreen {
+    width: 100%;
+    margin: 0 auto;
+    padding:0;
+    position: relative;
+}
+
+
+/* box theme pictures*/
+
+.reservation .container-xl {
+    img {
+        display: none;
+    }
+}
+    footer .container-xl img {
+            display: none;
+        }
+    
+
+
+
+
+
+@media screen and (min-width: 1440px) {
+    .reservation .container-xl {
+        img {
+            position: absolute;
+            display: block;
+        }
+        .sq-mid {
+            right: 86%;
+            bottom: 54%;
+        }
+        .sq-sm {
+            left: 86%;
+            top: 65%;
+        }
+    }
+
+footer .container-xl {
+    position: relative;
+    .sq-210 {
+        display: block;
+        position: absolute;
+        bottom: 120%;
+        left: 80%;
+    }
+}    
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1439px)  {
+    .container-xl {
+        width:970px;
+    }
+
+} 
+@media screen and (min-width: 992px) and (max-width: 1199px)  {
+    .container-xl {
+        width:750px;
+    }
+
+} 
+@media screen and (max-width: 991px)  {
+    .container-xl {
+        width: 100%;
+    }
+
+} 

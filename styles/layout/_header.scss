@@ -1,0 +1,147 @@
+@use './styles/until/mixins' as *;
+@use './styles/base/typography' as *;
+@use './styles/until/variables' as *;
+
+
+
+header .container-xl{
+    position: relative;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+      .logo {
+        width: 7.25rem;
+        position:relative;  
+        text-decoration: none;         
+        padding-left: 39px;
+        padding-right: 39px;
+        background-size: 37px 19px;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("/ico/lewooo.svg");
+            left: 0%;
+            bottom: 10%;
+            background-repeat: no-repeat;
+            height: 1.1875rem;
+            width: 2.3125rem;
+            display: block;
+             }
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            background: url("/ico/prawo.svg");
+            right: 0%;
+            bottom: 10%;
+            background-repeat: no-repeat;
+            height: 1.1875rem;
+            width: 2.3125rem;
+        }
+        &__text{        
+            h1{
+                font-size: 2.0625rem;
+                color: $btnBg;
+                font-weight: 700;
+                letter-spacing: 0.15rem;
+                line-height: 2rem;
+               
+            }h2 {
+                font-family: 'Sintony', sans-serif;
+                color: $fontMainColor;
+                font-size: 1.125rem;
+                letter-spacing: 0.9px;
+               
+               }
+           }   
+        }
+    nav {
+        margin-left: 6.125rem;
+        width: 36.125rem;
+        
+    }
+    .bucket {
+        width: 2.625rem;
+        margin-left: 0.563rem;
+        margin-right: 1.938rem;
+        display: flex;
+        justify-content: space-between;        
+        &__links {
+            display: flex;
+            align-items: center;
+            &--arrow {                
+               width: 7px;
+               height: 5px;               
+                }
+        }
+    }
+    .button-header {
+        position: absolute;
+        right: 0;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 1200px) and (max-width: 1439px)  {
+  header .container-xl nav {
+    margin-left: 1rem;
+    width: 31.5rem;;
+  }
+} 
+
+@media screen and (min-width: 992px) and (max-width: 1199px)  {
+    header .container-xl nav {
+        margin-left: 1rem;
+        width: 31.5rem;;
+    }
+    nav {
+        margin-left: 0rem;
+        width: 3.125rem; 
+    }
+  
+    .button-header {
+        width: 100%;
+        top:22vh;
+        display: flex;
+        justify-content: center;
+    }
+    .bucket {
+        width: 1rem;    
+    }
+}
+
+
+@media screen and (max-width: 991px)  {
+    header .container-xl {
+        position: relative;
+        justify-content: center;  
+        nav {
+         display: none;    
+        }
+        .button-header {
+            width: 100%;
+            top:22vh;
+            display: flex;
+            justify-content: center;
+        }    
+        .bucket {
+            position: absolute;
+            right: 0;
+            width: 2rem;
+            margin-left: 0;
+            margin-right: 0.5rem;
+        }
+    } 
+}
+
+
+
+    
+

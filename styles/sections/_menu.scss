@@ -1,0 +1,138 @@
+@use './styles/until/variables' as *;
+@use './styles/until/mixins' as *;
+
+.menu {
+    padding-top: 6.125rem
+}
+.food__menu {  
+        ul {
+        height: 18.625rem;
+        font-family: 'Sintony', sans-serif;
+        list-style: none;
+        overflow: scroll;
+        margin-top: 1.563rem;
+        margin-bottom: 3rem;
+        overflow-x: hidden;
+            /* width */
+            &::-webkit-scrollbar {
+                width: 5px;                              
+            }
+             /* Handle */ 
+             &::-webkit-scrollbar-thumb {
+                background: $food-slider;                    
+            }
+            &:hover::-webkit-scrollbar-thumb {
+                background: $btnBg; 
+            }
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background:$fontMainColor; 
+            }
+            li {
+            color: $font-color-b;
+            font-size: 1rem;
+            display: flex;
+            border: solid 1px #E5E5E5;   
+            border-style: hidden hidden solid hidden ;
+            .dish-composition {
+                @include flexCol;
+                flex: 3;              
+                h2 {
+                    margin-top: 1.25rem;
+                    font-size: 1rem;
+                    line-height: 1.063rem;
+                    color: $font-color-b;
+                    font-weight: bold;
+                    }
+                p {
+                    font-size: 0.875rem;
+                    line-height: 1.625rem;
+                    color: $font-color-f;
+                    margin-bottom: 1.25rem;
+                    }
+                }     
+              .price {
+                flex: 1;
+                font-size: 1.625rem;
+                font-weight: bold;
+                margin-top: 0.625rem;
+            } 
+        }        
+    }
+        
+
+}
+.tody__special {
+     h1{
+        margin-bottom: 1.563rem;        
+    }
+    .white-boxes {
+        display: grid;
+        grid-template-columns: calc(50% - 0.1rem) calc(50% - 0.1rem);
+        justify-content: space-around;
+        &__white-box {
+            background-color: $fontMainColor;
+            border: none;           
+            padding: 21.813rem auto 3.125rem 2.375rem;
+            font-size: 1.37rem;
+            line-height: 1.37rem;            
+            transition: 4s ease-in-out;
+            @include flexCol;
+            align-items: center;
+            transition-duration: 1s;
+            &:hover {
+                transform: scale(1.03);
+                box-shadow: 0px 12px 29px -2px rgba(0,0,0,0.50);
+                .dish-value h4 {
+                    color: $font-color-b;
+                }
+            }
+            &__today {
+                text-decoration: none;
+                box-shadow: 0px 12px 19px -2px rgba(0,0,0,0.33); 
+                img{     
+                    width: 100%;
+                    height: 172px;
+                    object-fit: cover;
+                    @include center;
+                    }  
+                .dish-value {
+                    font-family: 'Dosis', sans-serif;
+                    padding-top: 1.813rem; 
+                    padding-bottom: 3.146rem;
+                    padding-right: 2.438rem;
+                    font-weight: bold;
+                    h4 {
+                        color:$tody-special-font;
+                        }
+                    p {
+                        color: $btnBg;
+                    }
+            }
+        }
+       }
+    }
+}
+
+
+@media screen and (max-width: 991px)  {
+    .tody__special .white-boxes {
+        margin-bottom: 3rem;
+        @include flexCol;
+        &__white-box {margin-bottom: 1rem;   
+        }
+    }
+    .menu h1, .tody__special h1 {
+        text-align: center;
+    }
+    .food__menu .btn--sections {
+    width: 100%;
+        }
+}
+
+@media screen and (max-width: 640px) {
+    .food__menu {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}

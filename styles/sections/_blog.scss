@@ -1,0 +1,238 @@
+@use './styles/until/variables' as *;
+@use './styles/until/mixins' as *;
+
+
+
+
+.blog {
+  z-index: 1;
+    margin: 0 auto;
+    padding-top: 4.5em;
+    padding-bottom: 6.25rem;    
+    font-family: 'Sintony', sans-serif;
+    .container-xl {
+        height: 100%;
+        @include flexCol;
+        align-items: center;        
+        h1 {
+            margin-bottom: 1.875rem;            
+        }
+        .swiper-container {
+            width: 100%;
+            height: 18.4375rem;                
+        }
+        .swiper-slide {                  
+            padding-left: 4.3125rem;
+            background: #fff url("/img/image_blog.png") no-repeat;
+            background-position-y: bottom;
+            color: black;
+            width: 100%;
+            @include flexCol;
+            align-items: flex-start;
+            .info{                   
+                width: 39.9375rem;
+                padding-top: 2rem;
+                position: relative;
+                &::before {
+                    content: '\201F';
+                    position: absolute;
+                    font-size: 60px;
+                    left: -5%;
+                    transform: rotateX(180deg);
+                    bottom: 85%;                    
+                     }
+                &::after {
+                  content: '\201F';
+                  position: absolute;
+                  font-size: 60px;
+                  left: 97%;
+                  bottom: 35%;          
+                  transform: rotate(180deg);
+                       }              
+            .title {               
+                font-family: 'Dosis', sans-serif;
+                font-weight: bold;
+                font-size: 1.375rem; 
+                display: flex;
+                justify-content: flex-start;  
+            }  
+            
+            .text {               
+                position: relative;               
+                text-align: left;               
+                margin-top: 1.2rem;
+                p {
+                    font-family: 'Sintony', sans-serif;
+                    font-size: 0.9375rem;
+                    line-height: 1.875rem;
+                    color: $font-color-c;
+                   }
+                }
+              }
+                .lineFooter {
+                    padding: 1.82rem 2rem  1.81rem 0;
+                    border-top:  solid 2px #E5E5E5;   
+                    margin-top: 24px;
+                    margin-left: 0;
+                    width: 13.8125rem;
+                    @include flexCol;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    h3 {
+                        font-size: 16px;
+                        line-height: 17px;
+                        font-weight: bold;
+                        color: $font_color-b;
+                    }
+                    p {
+                      width: 40%;
+                      
+                      img {
+                        width: 12px;
+                        display: inline;
+                        
+                      }
+                    }
+                }       
+            
+        
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+        
+          .swiper-slide img {
+            display: block;
+            margin-top: 0px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }  
+          .swiper-pagination{
+            margin-right: 0%;
+           margin-bottom: 35%;
+            
+             
+  
+         
+          .swiper-pagination-bullet {
+            position: relative;
+            width: 14px;
+            height: 14px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            border: 2px solid #363D43;
+            margin-right: 0%;
+            opacity: 1;
+            background: white;
+            margin-bottom: 1%;
+          }
+        
+          .swiper-pagination-bullet-active {
+            color: #fff;
+            background: white;
+            border-color: $btnBg;
+            
+            &::after {
+                content: "";
+                position: absolute;
+                background: $btnBg;
+                height: 4px;
+                width: 4px;
+                border-radius: 50%;
+                left: 34%;
+                top: 33%;    
+                }          
+             }
+          }
+      }
+  }
+  
+  @media screen and (max-width: 991px)  {
+    .blog .swiper-container .swiper-slide .info{                   
+    width: 90%;
+    margin-left: 0rem;
+    &::before {    
+      font-size: 30px;
+      left: -5%;
+      bottom: 88%;
+      
+       }
+  &::after {
+    font-size: 30px;
+    left: 97%;
+    bottom: 29%;          
+          }       
+    .text {
+      margin-top: 0.5rem;
+      margin-right: 1rem;
+      p{
+        font-size: 0.813rem;
+      }
+      
+    }
+    .lineFooter {
+      margin-top: 0;
+    }
+           }   
+      .blog .swiper-container .swiper-slide  {
+        background-size: 100%;
+        padding: 0;
+      }            
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px)  {
+  
+    .blog .swiper-container .swiper-slide .info{                   
+      width: 25rem;
+      padding-top: 0.5rem;
+      position: relative;
+      padding-left: 7rem;
+      &::before {        
+        left: 17%; 
+        bottom: 93%;       
+         }
+         &::after {
+         
+          left: 99%;
+         
+               }     
+      .text {      
+        margin-top: 1.2rem;
+        p {                     
+            line-height: 1.7rem;        
+        }
+    }
+   }                 
+ }
+
+ @media screen and (min-width: 1200px) and (max-width: 1439px)  {
+  .blog .swiper-container .swiper-slide .info{                   
+  
+    padding-left: 8rem;
+    &::before {        
+      left: 13.5%; 
+      
+       }
+  }
+} 
+  
+          
+  
+    
+   
+  
+
+  
+  

@@ -1,0 +1,66 @@
+
+
+@use './styles/until/variables' as *;
+
+
+.reservation__new-reservation__grid-inputs__input {
+                 border-radius: 2px;
+                 border-style: none;
+                 width: 23.125rem;
+                 height: 3.188rem;
+                 font-size: 0.875rem;
+                 color: $font-color-c;
+                 &::placeholder {
+                     font-family: 'Sintony', sans-serif;
+                     font-size: 0.875rem;
+                     color: $font-color-c;
+                     background-color: white;
+                     background-image: url("/ico/question.png");
+                     background-repeat: no-repeat;
+                     background-size: 4%;
+                     background-position-x: 10px;
+                     padding-left: 32px;
+                     background {
+                         opacity: 0.1;
+                     }
+                 }
+                }
+
+
+
+
+.input-line input {
+    width: 20.68rem;
+    height: 3.18rem;
+    border-radius: 4px;
+    border: 3px solid $in-footer;
+    background: $footer-main;
+    color: $fontMainColor;
+    font-family: 'Sintony', sans-serif;  
+    &::placeholder {
+        font-size: 14px;
+        color: $fontMainColor;
+        background-size: 100%;
+        background:url("/ico/question2.png") no-repeat;
+        background-size: 4%;
+        background-position-x: 10px;
+        padding-left: 32px;
+        background {
+            opacity: 0.1;
+        }
+}
+    
+
+}
+
+@media screen and (max-width: 991px) {
+    .reservation__new-reservation__grid-inputs__input {
+        width: 21rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .input-line input {
+        width: 15rem;
+}
+}
